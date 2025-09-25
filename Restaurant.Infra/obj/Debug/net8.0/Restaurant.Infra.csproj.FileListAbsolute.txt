@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\bin\Debug\net8.0\Restaurant.Infra.deps.json
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\bin\Debug\net8.0\Restaurant.Infra.runtimeconfig.json
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\bin\Debug\net8.0\Restaurant.Infra.dll
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\bin\Debug\net8.0\Restaurant.Infra.pdb
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\bin\Debug\net8.0\Restaurant.Core.dll
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\bin\Debug\net8.0\Restaurant.Core.pdb
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.AssemblyInfo.cs
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaura.674D5E69.Up2Date
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.dll
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\refint\Restaurant.Infra.dll
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.pdb
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\Restaurant.Infra.genruntimeconfig.cache
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Infra\obj\Debug\net8.0\ref\Restaurant.Infra.dll
