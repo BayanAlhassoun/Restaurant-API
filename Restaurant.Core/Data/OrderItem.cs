@@ -5,11 +5,11 @@ namespace Restaurant.Core.Data;
 
 public partial class OrderItem
 {
-    public decimal OrderItemId { get; set; }
+    public decimal Order_Item_Id { get; set; }
 
-    public decimal OrderId { get; set; }
+    public decimal Order_Id { get; set; }
 
-    public decimal ItemId { get; set; }
+    public decimal Item_Id { get; set; }
 
     public decimal Quantity { get; set; }
 

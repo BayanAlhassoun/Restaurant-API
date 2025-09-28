@@ -5,7 +5,7 @@ namespace Restaurant.Core.Data;
 
 public partial class Employee
 {
-    public decimal EmployeeId { get; set; }
+    public decimal Employee_Id { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -15,9 +15,9 @@ public partial class Employee
 
     public decimal? Salary { get; set; }
 
-    public decimal? BranchId { get; set; }
+    public decimal? Branch_Id { get; set; }
 
-    public decimal? PositionId { get; set; }
+    public decimal? Position_Id { get; set; }
 
     public virtual Branch? Branch { get; set; }
 

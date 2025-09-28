@@ -5,9 +5,9 @@ namespace Restaurant.Core.Data;
 
 public partial class Category
 {
-    public decimal CategoryId { get; set; }
+    public decimal Category_Id { get; set; }
 
-    public string CategoryName { get; set; } = null!;
+    public string Category_Name { get; set; } = null!;
 
     public virtual ICollection<MenuItem> MenuItems { get; set; } = new List<MenuItem>();
 }

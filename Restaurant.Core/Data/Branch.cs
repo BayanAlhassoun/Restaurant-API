@@ -5,13 +5,13 @@ namespace Restaurant.Core.Data;
 
 public partial class Branch
 {
-    public decimal BranchId { get; set; }
+    public decimal Branch_Id { get; set; }
 
     public string Name { get; set; } = null!;
 
     public string? Phone { get; set; }
 
-    public decimal? LocationId { get; set; }
+    public decimal? Location_Id { get; set; }
 
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 

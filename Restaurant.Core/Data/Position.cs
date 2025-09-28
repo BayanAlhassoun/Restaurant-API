@@ -5,9 +5,9 @@ namespace Restaurant.Core.Data;
 
 public partial class Position
 {
-    public decimal PositionId { get; set; }
+    public decimal Position_Id { get; set; }
 
-    public string PositionName { get; set; } = null!;
+    public string Position_Name { get; set; } = null!;
 
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 }

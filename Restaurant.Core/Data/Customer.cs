@@ -5,7 +5,7 @@ namespace Restaurant.Core.Data;
 
 public partial class Customer
 {
-    public decimal CustomerId { get; set; }
+    public decimal Customer_Id { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -13,7 +13,7 @@ public partial class Customer
 
     public string? Email { get; set; }
 
-    public decimal? GenderId { get; set; }
+    public decimal? Gender_Id { get; set; }
 
     public virtual Gender? Gender { get; set; }
 

@@ -162,3 +162,4 @@ C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\refint
 C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\Restaurant.API.pdb
 C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\Restaurant.API.genruntimeconfig.cache
 C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\ref\Restaurant.API.dll
+C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\Restaurant.API.sourcelink.json

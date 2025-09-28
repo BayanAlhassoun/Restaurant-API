@@ -5,9 +5,9 @@ namespace Restaurant.Core.Data;
 
 public partial class Gender
 {
-    public decimal GenderId { get; set; }
+    public decimal Gender_Id { get; set; }
 
-    public string GenderName { get; set; } = null!;
+    public string Gender_Name { get; set; } = null!;
 
     public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>();
 }

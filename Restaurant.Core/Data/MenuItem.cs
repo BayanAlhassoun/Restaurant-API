@@ -5,7 +5,7 @@ namespace Restaurant.Core.Data;
 
 public partial class MenuItem
 {
-    public decimal ItemId { get; set; }
+    public decimal Item_Id { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -13,13 +13,13 @@ public partial class MenuItem
 
     public decimal Price { get; set; }
 
-    public decimal? CategoryId { get; set; }
+    public decimal? Category_Id { get; set; }
 
-    public decimal? StatusId { get; set; }
+    public decimal? Status_Id { get; set; }
 
-    public DateTime? DateAdded { get; set; }
+    public DateTime? Date_Added { get; set; }
 
-    public DateTime? DateRemoved { get; set; }
+    public DateTime? Date_Removed { get; set; }
 
     public virtual Category? Category { get; set; }
 

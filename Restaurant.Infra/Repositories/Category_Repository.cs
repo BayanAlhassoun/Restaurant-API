@@ -24,7 +24,7 @@ namespace Restaurant.Infra.Repositories
         public void CreateCategory(Category category)
         {
             var p = new DynamicParameters();
-            p.Add("Ct_name", category.CategoryName, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("Ct_name", category.Category_Name, dbType: DbType.String, direction: ParameterDirection.Input);
             var result = _dBContext.Conection.Execute("Categories_Package.CreateCategories", p, commandType: CommandType.StoredProcedure); 
         }
 
@@ -52,8 +52,8 @@ namespace Restaurant.Infra.Repositories
         public void UpdateCategory(Category category)
         {
             var p = new DynamicParameters();
-            p.Add("Ct_id", category.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("Ct_name", category.CategoryName, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("Ct_id", category.Category_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("Ct_name", category.Category_Name, dbType: DbType.String, direction: ParameterDirection.Input);
             var result = _dBContext.Conection.Execute("Categories_Package.UpdateCategories", p, commandType: CommandType.StoredProcedure);
         }
     }

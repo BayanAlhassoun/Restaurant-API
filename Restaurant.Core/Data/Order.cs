@@ -5,15 +5,15 @@ namespace Restaurant.Core.Data;
 
 public partial class Order
 {
-    public decimal OrderId { get; set; }
+    public decimal Order_Id { get; set; }
 
-    public DateTime? OrderDate { get; set; }
+    public DateTime? Order_Date { get; set; }
 
-    public decimal? TotalAmount { get; set; }
+    public decimal? Total_Amount { get; set; }
 
-    public decimal? BranchId { get; set; }
+    public decimal? Branch_Id { get; set; }
 
-    public decimal? CustomerId { get; set; }
+    public decimal? Customer_Id { get; set; }
 
     public virtual Branch? Branch { get; set; }
 

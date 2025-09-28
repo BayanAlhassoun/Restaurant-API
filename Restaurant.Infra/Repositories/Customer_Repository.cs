@@ -18,7 +18,7 @@ namespace Restaurant.Infra.Repositories
 
         private readonly IDBContext _dBContext; // new DBContext()
 
-        public Customer_Repository(IDBContext dBContext) //dbContext = new DBContext()
+        public Customer_Repository(IDBContext dBContext) //IDBContext dBContext  = new DBContext(), DBContext dBContext  = new DBContext()
         {
             _dBContext = dBContext;
         }
@@ -29,7 +29,7 @@ namespace Restaurant.Infra.Repositories
             p.Add("C_name", customer.Name, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("C_phone", customer.Phone, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("C_email", customer.Email, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("C_gender", customer.GenderId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("C_gender", customer.Gender_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             var result = _dBContext.Conection.Execute("Customer_Package.CreateCustomer", p, commandType: CommandType.StoredProcedure);
         }
 
@@ -57,11 +57,11 @@ namespace Restaurant.Infra.Repositories
         public void UpdateCustomer(Customer customer)
         {
             var p = new DynamicParameters();
-            p.Add("C_ID", customer.CustomerId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("C_ID", customer.Customer_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("C_name", customer.Name, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("C_phone", customer.Phone, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("C_email", customer.Email, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("C_gender", customer.GenderId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("C_gender", customer.Gender_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             var result = _dBContext.Conection.Execute("Customer_Package.UpdateCustomer", p, commandType: CommandType.StoredProcedure);
         }
     }

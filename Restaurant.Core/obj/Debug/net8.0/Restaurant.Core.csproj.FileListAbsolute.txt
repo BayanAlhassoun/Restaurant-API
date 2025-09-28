@@ -10,3 +10,4 @@ C:\Users\User\source\repos\Restaurant.API\Restaurant.Core\obj\Debug\net8.0\Resta
 C:\Users\User\source\repos\Restaurant.API\Restaurant.Core\obj\Debug\net8.0\refint\Restaurant.Core.dll
 C:\Users\User\source\repos\Restaurant.API\Restaurant.Core\obj\Debug\net8.0\Restaurant.Core.pdb
 C:\Users\User\source\repos\Restaurant.API\Restaurant.Core\obj\Debug\net8.0\ref\Restaurant.Core.dll
+C:\Users\User\source\repos\Restaurant.API\Restaurant.Core\obj\Debug\net8.0\Restaurant.Core.sourcelink.json
