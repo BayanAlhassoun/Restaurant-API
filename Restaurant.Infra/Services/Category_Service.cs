@@ -1,4 +1,5 @@
 ﻿using Restaurant.Core.Data;
+using Restaurant.Core.DTO;
 using Restaurant.Core.Repositories;
 using Restaurant.Core.Services;
 using System;
@@ -31,6 +32,11 @@ namespace Restaurant.Infra.Services
         public List<Category> GetAllCategories()
         {
             return _category_Repository.GetAllCategories();
+        }
+
+        public List<Category_Product> GetAllProductsByCategory(string categoryName)
+        {
+            return _category_Repository.GetAllProductsByCategory(categoryName);
         }
 
         public Category GetCategoryByID(int id)

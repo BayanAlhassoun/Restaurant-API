@@ -28,6 +28,8 @@ namespace Restaurant.API
             builder.Services.AddScoped<ICategory_Service, Category_Service>();
             builder.Services.AddScoped<IEmployee_Repository, EmployeeRepository>();
             builder.Services.AddScoped<IEmployee_Service, Employee_Service>();
+            builder.Services.AddScoped<IOrder_Repository, Order_Repository>();
+            builder.Services.AddScoped<IOrder_Service, Order_Service>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

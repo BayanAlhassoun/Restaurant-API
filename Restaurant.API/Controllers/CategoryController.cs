@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Restaurant.Core.Data;
+using Restaurant.Core.DTO;
 using Restaurant.Core.Repositories;
 using Restaurant.Core.Services;
 
@@ -46,6 +47,13 @@ namespace Restaurant.API.Controllers
         public Category GetCategoryById(int id) //https://localhost:7031/api/category/GetCategoryById/2
         {
             return _category_service.GetCategoryByID(id);
+        }
+
+        [HttpGet]
+        [Route("GetAllProductsByCategory/{categoryName}")]
+        public List<Category_Product> GetAllProductsByCategoryName(string categoryName) //https://localhost:7031/api/category/GetAllProductsByCategory/
+        {
+            return _category_service.GetAllProductsByCategory(categoryName);
         }
     }
 }

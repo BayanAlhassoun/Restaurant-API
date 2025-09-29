@@ -4,6 +4,7 @@ using Restaurant.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,9 +34,22 @@ namespace Restaurant.Infra.Services
            return _customer_Repository.GetAllCustomers();
         }
 
+        public int GetCstomersCount()
+        {
+            var result = _customer_Repository.GetAllCustomers().Count;
+            return result;
+        }
+
         public Customer GetCustomerById(int id)
         {
             return _customer_Repository.GetCustomerById(id);
+        }
+
+        public List<Customer> GetMaleCustomers()
+        {
+            var result = _customer_Repository.GetAllCustomers();
+            result = result.Where(x => x.Gender_Id == 1).ToList();
+            return result;
         }
 
         public void UpdateCustomer(Customer customer)

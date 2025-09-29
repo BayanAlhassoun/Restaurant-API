@@ -48,5 +48,18 @@ namespace Restaurant.API.Controllers
            return _customer_Service.GetCustomerById(id);
         }
 
+        [HttpGet]
+        [Route("GetMaleCustomers")]
+        public List<Customer> GetMaleCustomers()// https://localhost:7031/api/customer/GetMaleCustomers
+        {
+            return _customer_Service.GetMaleCustomers();
+        }
+
+        [HttpGet]
+        [Route("GetCustomersCount")]
+        public int GetCustomersCount() // https://localhost:7031/api/customer/GetCustomersCount
+        {
+            return _customer_Service.GetCstomersCount();
+        }
     }
 }

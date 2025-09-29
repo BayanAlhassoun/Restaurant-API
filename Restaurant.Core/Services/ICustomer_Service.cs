@@ -14,5 +14,7 @@ namespace Restaurant.Core.Services
         void CreateCustomer(Customer customer);
         void UpdateCustomer(Customer customer);
         void DeleteCustomer(int id);
+        List<Customer> GetMaleCustomers();
+        int GetCstomersCount();
     }
 }

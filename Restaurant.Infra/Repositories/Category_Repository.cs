@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Restaurant.Core.Common;
 using Restaurant.Core.Data;
+using Restaurant.Core.DTO;
 using Restaurant.Core.Repositories;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,14 @@ namespace Restaurant.Infra.Repositories
         public List<Category> GetAllCategories()
         {
             var result = _dBContext.Conection.Query<Category>("Categories_Package.GetAllCategories", commandType: CommandType.StoredProcedure);
+            return result.ToList();
+        }
+
+        public List<Category_Product> GetAllProductsByCategory(string categoryName)
+        {
+            var p = new DynamicParameters();
+            p.Add("c_name", categoryName, dbType: DbType.String, direction: ParameterDirection.Input);
+            var result = _dBContext.Conection.Query<Category_Product>("Categories_Package.GetProductsByCategory", p, commandType: CommandType.StoredProcedure);
             return result.ToList();
         }
 

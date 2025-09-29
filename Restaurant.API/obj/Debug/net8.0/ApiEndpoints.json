@@ -87,6 +87,32 @@
   },
   {
     "ContainingType": "Restaurant.API.Controllers.CategoryController",
+    "Method": "GetAllProductsByCategoryName",
+    "RelativePath": "api/Category/GetAllProductsByCategory/{categoryName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Restaurant.Core.DTO.Category_Product, Restaurant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Restaurant.API.Controllers.CategoryController",
     "Method": "GetCategoryById",
     "RelativePath": "api/Category/GetCategoryById/{id}",
     "HttpMethod": "GET",
@@ -224,6 +250,46 @@
     ]
   },
   {
+    "ContainingType": "Restaurant.API.Controllers.CustomerController",
+    "Method": "GetCustomersCount",
+    "RelativePath": "api/Customer/GetCustomersCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Restaurant.API.Controllers.CustomerController",
+    "Method": "GetMaleCustomers",
+    "RelativePath": "api/Customer/GetMaleCustomers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Restaurant.Core.Data.Customer, Restaurant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Restaurant.API.Controllers.EmployeeController",
     "Method": "GetEmployeesBySalary",
     "RelativePath": "api/Employee/GetEmployeesBySalary/{salary}",
@@ -240,6 +306,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Restaurant.Core.Data.Employee, Restaurant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Restaurant.API.Controllers.OrderController",
+    "Method": "GetTotalOrdersByCustomer",
+    "RelativePath": "api/Order/GetTotalOrdersByCustomer/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Restaurant.Core.DTO.TotalOrders",
         "MediaTypes": [
           "text/plain",
           "application/json",
