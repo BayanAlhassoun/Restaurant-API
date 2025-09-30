@@ -529,6 +529,45 @@
         }
       }
     },
+    "/api/Weather/GetWeatherByCity/{cityName}": {
+      "get": {
+        "tags": [
+          "Weather"
+        ],
+        "parameters": [
+          {
+            "name": "cityName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Weather"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Weather"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Weather"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -684,6 +723,20 @@
         },
         "additionalProperties": false
       },
+      "Coord": {
+        "type": "object",
+        "properties": {
+          "lon": {
+            "type": "string",
+            "nullable": true
+          },
+          "lat": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Customer": {
         "type": "object",
         "properties": {
@@ -817,6 +870,24 @@
             "items": {
               "$ref": "#/components/schemas/Branch"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Main": {
+        "type": "object",
+        "properties": {
+          "temp": {
+            "type": "string",
+            "nullable": true
+          },
+          "pressure": {
+            "type": "string",
+            "nullable": true
+          },
+          "humidity": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -1012,6 +1083,16 @@
         },
         "additionalProperties": false
       },
+      "SYS": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Status": {
         "type": "object",
         "properties": {
@@ -1047,6 +1128,32 @@
         },
         "additionalProperties": false
       },
+      "Weather": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeZone": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "main": {
+            "$ref": "#/components/schemas/Main"
+          },
+          "wind": {
+            "$ref": "#/components/schemas/Wind"
+          },
+          "sys": {
+            "$ref": "#/components/schemas/SYS"
+          },
+          "coord": {
+            "$ref": "#/components/schemas/Coord"
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -1064,6 +1171,16 @@
             "readOnly": true
           },
           "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wind": {
+        "type": "object",
+        "properties": {
+          "speed": {
             "type": "string",
             "nullable": true
           }

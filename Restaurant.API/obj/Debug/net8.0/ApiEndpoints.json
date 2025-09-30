@@ -342,6 +342,32 @@
     ]
   },
   {
+    "ContainingType": "Restaurant.API.Controllers.WeatherController",
+    "Method": "GetWeatherByCity",
+    "RelativePath": "api/Weather/GetWeatherByCity/{cityName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cityName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Restaurant.Core.DTO.Weather",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Restaurant.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
