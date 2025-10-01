@@ -164,3 +164,4 @@ C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\Restau
 C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\ref\Restaurant.API.dll
 C:\Users\User\source\repos\Restaurant.API\Restaurant.API\obj\Debug\net8.0\Restaurant.API.sourcelink.json
 C:\Users\User\source\repos\Restaurant.API\Restaurant.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\source\repos\Restaurant.API\Restaurant.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

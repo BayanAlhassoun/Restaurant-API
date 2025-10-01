@@ -316,6 +316,22 @@
     ]
   },
   {
+    "ContainingType": "Restaurant.API.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "Restaurant.Core.Data.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Restaurant.API.Controllers.OrderController",
     "Method": "GetTotalOrdersByCustomer",
     "RelativePath": "api/Order/GetTotalOrdersByCustomer/{name}",

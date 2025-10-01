@@ -10,4 +10,6 @@ public partial class Gender
     public string Gender_Name { get; set; } = null!;
 
     public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>();
+
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

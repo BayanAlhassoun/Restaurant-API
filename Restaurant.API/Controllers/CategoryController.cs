@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Restaurant.Core.Data;
 using Restaurant.Core.DTO;
@@ -19,6 +20,7 @@ namespace Restaurant.API.Controllers
         }
 
         [HttpGet]
+        [CheckClaims("RoleId", "1")]
         public List<Category> GetAllCategories() //https://localhost:7031/api/category
         {
             return _category_service.GetAllCategories();
@@ -44,12 +46,14 @@ namespace Restaurant.API.Controllers
 
         [HttpGet]
         [Route("GetCategoryById/{id}")]
+        [AllowAnonymous]
         public Category GetCategoryById(int id) //https://localhost:7031/api/category/GetCategoryById/2
         {
             return _category_service.GetCategoryByID(id);
         }
 
         [HttpGet]
+        [Authorize]
         [Route("GetAllProductsByCategory/{categoryName}")]
         public List<Category_Product> GetAllProductsByCategoryName(string categoryName) //https://localhost:7031/api/category/GetAllProductsByCategory/
         {
