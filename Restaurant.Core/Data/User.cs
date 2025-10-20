@@ -12,6 +12,7 @@ public partial class User
     public string Email { get; set; } = null!;
 
     public string Phone { get; set; } = null!;
+    public string ImageName { get; set; }
 
     public DateTime? Createdat { get; set; }
 

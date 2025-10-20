@@ -11,5 +11,6 @@ namespace Restaurant.Core.Services
     public interface ILogin_Service
     {
        string Login(Login login);
+        void Register (UserLogin userLogin);
     }
 }

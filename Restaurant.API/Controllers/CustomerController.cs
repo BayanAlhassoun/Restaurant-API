@@ -17,7 +17,7 @@ namespace Restaurant.API.Controllers
         }
 
         [HttpGet]
-        [CheckClaims("RoleId", "2")]
+        //[CheckClaims("RoleId", "1")]
        public List<Customer> GetAllCustomers() // https://localhost:7031/api/customer
         {
            return _customer_Service.GetAllCustomers();

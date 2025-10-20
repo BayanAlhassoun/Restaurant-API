@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Restaurant.Core.Data;
+using Restaurant.Core.DTO;
 using Restaurant.Core.Services;
 
 namespace Restaurant.API.Controllers
@@ -31,5 +32,28 @@ namespace Restaurant.API.Controllers
                 return Ok(result);
             }
         }
+
+        [HttpPost]
+        [Route("Register")]
+        public void Register(UserLogin userLogin)// Mohammad, 123
+        {
+           _loginService.Register(userLogin);
+
+        }
+
+        [HttpPost]
+        [Route("UploadImage")]
+        public string UploadImage(IFormFile file)// person.png
+        {
+            var fileName = Guid.NewGuid().ToString() +"_" + file.FileName; // 4tiwehoiwejfpoweur979_Person.png / reywiquipfjpmjmdf_Person.png / hlgjlkteejhoslmk_Person.png
+            var fullPath = Path.Combine("C:\\Users\\User\\source\\repos\\finalRestaurant\\src\\assets\\Images", fileName);
+
+            using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+            return fileName;
+        }
+
     }
 }

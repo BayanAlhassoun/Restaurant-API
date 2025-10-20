@@ -20,7 +20,7 @@ namespace Restaurant.API.Controllers
         }
 
         [HttpGet]
-        [CheckClaims("RoleId", "1")]
+        //[CheckClaims("RoleId", "1")]
         public List<Category> GetAllCategories() //https://localhost:7031/api/category
         {
             return _category_service.GetAllCategories();

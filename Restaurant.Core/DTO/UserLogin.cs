@@ -16,6 +16,8 @@ namespace Restaurant.Core.DTO
 
         public string Phone { get; set; } = null!;
 
+        public string ImageName { get; set; }
+
         public DateTime? Createdat { get; set; }
 
         public decimal? Genderid { get; set; }

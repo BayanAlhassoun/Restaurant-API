@@ -1,5 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using Restaurant.Core.Data;
+using Restaurant.Core.DTO;
 using Restaurant.Core.Repositories;
 using Restaurant.Core.Services;
 using System;
@@ -47,6 +48,11 @@ namespace Restaurant.Infra.Services
                 var token = auth_Handler.CreateToken(tokenDescriptor);
                 return auth_Handler.WriteToken(token);
             }
+        }
+
+        public void Register(UserLogin userLogin)
+        {
+            _loginRepository.Register(userLogin);
         }
     }
 }

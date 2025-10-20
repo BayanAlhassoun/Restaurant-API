@@ -11,5 +11,6 @@ namespace Restaurant.Core.Repositories
     public interface ILogin_Repository
     {
       UserLogin Login(Login login);
+        void Register(UserLogin userLogin);
     }
 }

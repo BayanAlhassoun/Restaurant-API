@@ -51,6 +51,10 @@ namespace Restaurant.API
             builder.Services.AddScoped<IOrder_Service, Order_Service>();
             builder.Services.AddScoped<ILogin_Repository, Login_Repository>();
             builder.Services.AddScoped<ILogin_Service, Login_Service>();
+            builder.Services.AddCors(c =>
+            {
+                c.AddPolicy("x", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
             var app = builder.Build();
 
             
@@ -65,8 +69,7 @@ namespace Restaurant.API
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
-
-
+            app.UseCors("x");
             app.MapControllers();
 
             app.Run();
