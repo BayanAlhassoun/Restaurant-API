@@ -46,11 +46,25 @@ namespace Restaurant.Infra.Repositories
             return result.ToList();
         }
 
+        public List<User> GetAllUsers()
+        {
+            var result = _dBContext.Conection.Query<User>("Customer_Package.GetAllUsers", commandType: CommandType.StoredProcedure);
+            return result.ToList();
+        }
+
         public Customer GetCustomerById(int id)
         {
             var p = new DynamicParameters();
             p.Add("id", id, dbType: DbType.Int64, direction: ParameterDirection.Input);
             var result = _dBContext.Conection.Query<Customer>("Customer_Package.GetCustomerById", p, commandType: CommandType.StoredProcedure); // {}
+            return result.FirstOrDefault();
+        }
+
+        public User GetUserById(int id)
+        {
+            var p = new DynamicParameters();
+            p.Add("id", id, dbType: DbType.Int64, direction: ParameterDirection.Input);
+            var result = _dBContext.Conection.Query<User>("Customer_Package.GetUserByID", p, commandType: CommandType.StoredProcedure); // {}
             return result.FirstOrDefault();
         }
 

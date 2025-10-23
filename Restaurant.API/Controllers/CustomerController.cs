@@ -17,8 +17,8 @@ namespace Restaurant.API.Controllers
         }
 
         [HttpGet]
-        //[CheckClaims("RoleId", "1")]
-       public List<Customer> GetAllCustomers() // https://localhost:7031/api/customer
+        [CheckClaims("RoleId", "1")]
+        public List<Customer> GetAllCustomers() // https://localhost:7031/api/customer
         {
            return _customer_Service.GetAllCustomers();
         }
@@ -62,5 +62,27 @@ namespace Restaurant.API.Controllers
         {
             return _customer_Service.GetCstomersCount();
         }
+        [HttpGet]
+        [Route("GetAllUsers")]
+        public List<User> GetAllUsers() // https://localhost:7031/api/customer/GetAllUsers
+        {
+            return _customer_Service.GetAllUsers();
+        }
+
+        [HttpGet]
+        [Route("GetuserById/{id}")]
+
+        public User GetUserById(int id) // https://localhost:7031/api/customer/GetuserById/20
+        {
+            return _customer_Service.GetUserById(id);
+        }
+
+        [HttpGet]
+        [Route("Search/{name}")]
+        public List<Customer> Search(string name)
+        {
+            return _customer_Service.Search(name);
+        }
+
     }
 }

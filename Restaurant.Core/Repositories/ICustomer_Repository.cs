@@ -14,5 +14,9 @@ namespace Restaurant.Core.Repositories
        void CreateCustomer(Customer customer);
         void UpdateCustomer (Customer customer);
         void DeleteCustomer (int id);
+        List<User> GetAllUsers();
+        User GetUserById(int id);
+
+
     }
 }

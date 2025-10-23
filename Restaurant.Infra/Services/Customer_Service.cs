@@ -34,6 +34,11 @@ namespace Restaurant.Infra.Services
            return _customer_Repository.GetAllCustomers();
         }
 
+        public List<User> GetAllUsers()
+        {
+            return _customer_Repository.GetAllUsers();
+        }
+
         public int GetCstomersCount()
         {
             var result = _customer_Repository.GetAllCustomers().Count;
@@ -49,6 +54,18 @@ namespace Restaurant.Infra.Services
         {
             var result = _customer_Repository.GetAllCustomers();
             result = result.Where(x => x.Gender_Id == 1).ToList();
+            return result;
+        }
+
+        public User GetUserById(int id)
+        {
+            return _customer_Repository.GetUserById(id);
+        }
+
+        public List<Customer> Search(string name)
+        {
+            var result = _customer_Repository.GetAllCustomers();
+            result = result.Where(x => x.Name.ToUpper().Contains(name.ToUpper())).ToList();
             return result;
         }
 

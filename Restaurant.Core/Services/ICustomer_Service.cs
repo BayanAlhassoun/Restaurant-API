@@ -16,5 +16,10 @@ namespace Restaurant.Core.Services
         void DeleteCustomer(int id);
         List<Customer> GetMaleCustomers();
         int GetCstomersCount();
+        List<User> GetAllUsers();
+        User GetUserById (int id);
+
+        List<Customer> Search(string name);
+
     }
 }
